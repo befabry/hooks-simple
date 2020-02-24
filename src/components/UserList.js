@@ -1,0 +1,17 @@
+import React from "react";
+
+import useResources from "./useResource";
+
+const UserList = () => {
+    const resources = useResources('users');
+
+    return (
+        <ul>
+            {resources.map((user) => (
+                <li key={user.id}>{user.name}</li>
+            ))}
+        </ul>
+    );
+};
+
+export default UserList;
